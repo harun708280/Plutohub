@@ -17,7 +17,7 @@ const Team = () => {
       post: "CEO",
     },
     {
-      img: "/images/mahmud.png",
+      img: "/images/shahin.png",
       name: "Mahmud Kabir",
       post: "Content Writer",
     },
