@@ -22,6 +22,8 @@ export default function Home() {
      
       <Services />
        <Projects />
+
+       
       <Promo />
       <TestimonialsSection />
       <Price />
