@@ -211,7 +211,11 @@ const TestimonialsSection = () => {
             <div key={testimonial.id}>
               <div
                 className="single-testimonial-item p-4 text-white rounded position-relative"
-                
+                style={{
+                  backgroundImage: "url(/images/testimonial-bg.png)",
+                  backgroundSize: "100% 100%",
+                  backgroundRepeat: "no-repeat",
+                }}
               >
                 <Image
                   src="/images/quote-left.svg"
