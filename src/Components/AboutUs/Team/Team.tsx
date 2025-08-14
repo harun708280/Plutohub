@@ -22,7 +22,7 @@ const Team = () => {
       post: "UI/UX designer",
     },
     {
-      img: "/images/mahmud.png",
+      img: "/images/MahmudKabir.png",
       name: "Mahmud Kabir",
       post: "COO",
     },
