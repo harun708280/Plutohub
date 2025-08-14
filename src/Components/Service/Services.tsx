@@ -59,8 +59,7 @@ const Services = () => {
           </Col>
           <Col sm={8}>
             <h2 className='title title_animation2'>
-              From sleek UI/UX to bold branding, we design it all for your
-              product!
+              From sleek UI/UX to bold branding, we design it all for your product!
             </h2>
           </Col>
         </Row>

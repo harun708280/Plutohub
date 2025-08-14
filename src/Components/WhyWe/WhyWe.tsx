@@ -11,10 +11,10 @@ import we_make_shape1 from '../../assets/img/we-make-shape1.svg'
 import we_make_shape2 from '../../assets/img/we-make-shape2.svg'
 import standout_light from '../../assets/img/standout-light.svg'
 import standout_long_arrow from '../../assets/img/standout-long-arrow.svg'
-import why_we_project from '../../assets/img/why-we-project-image.svg'
+import why_we_project from '../../assets/img/gsapLandingPage.svg'
 import we_drive_icon from '../../assets/img/we-drive-icon.svg'
 import work_icon from '../../assets/img/work-icon.svg'
-import why_we_project2 from '../../assets/img/why-we-project-image2.svg'
+import why_we_project2 from '../../assets/img/gsapMobil.svg'
 
 gsap.registerPlugin(ScrollTrigger)
 

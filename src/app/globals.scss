@@ -176,7 +176,12 @@ span.animated-dominate {
     margin-left: 10px;
     transform: rotate(45deg);
   }
+  .arrow_icon:hover {
+  background-color: #fff !important;;
 }
+}
+
+
 
 // title css
 .sub_title {
@@ -373,8 +378,8 @@ span.animated-dominate {
   .pr_content {
     padding: 30px 20px 10px;
 
-    h4 {
-      font-size: 26px;
+    h3 {
+      font-size: 26px ;
       line-height: 120%;
       font-weight: 600;
     }
@@ -384,6 +389,11 @@ span.animated-dominate {
       line-height: 160%;
       color: rgba(255, 255, 255, 0.7);
       margin-bottom: 0;
+
+      display: -webkit-box;
+      -webkit-box-orient: vertical; 
+      -webkit-line-clamp: 1; 
+      overflow: hidden; 
     }
   }
 
@@ -399,6 +409,11 @@ span.animated-dominate {
     }
   }
 }
+
+.pt{
+  margin-top:5px;
+}
+
 
 // .service area css
 .service_flip_item {
@@ -433,6 +448,8 @@ span.animated-dominate {
       img {
         border-radius: 12px;
       }
+
+      
     }
 
     .ser_content {
@@ -458,7 +475,7 @@ span.animated-dominate {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px;
+    padding: 30px;
 
     h3 {
       font-size: 32px;
@@ -699,7 +716,7 @@ span.animated-dominate {
       .arrow_icon {
         position: absolute;
         right: 10px;
-        background: var(--hoverColor);
+        background: var(--hoverColor) !important;
         color: #fff;
       }
     }
@@ -736,6 +753,8 @@ span.animated-dominate {
     }
   }
 }
+
+
 
 .quoted_box {
   .quote_img {
@@ -975,7 +994,7 @@ header nav ul {
 header nav ul li a {
   color: #fff;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 header {
@@ -1582,7 +1601,7 @@ section.testimonials-area {
   background-size: cover;
   padding: 24px;
   color: #fff;
-  height: 380px;
+  height: 480px;
 
   clip-path: polygon(100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
 }
@@ -1607,12 +1626,20 @@ section.testimonials-area {
 }
 
 .single-testimonial-item .message {
-  font-size: 20px;
+  font-size: 16px !important;
   margin-bottom: 24px;
+  font-weight:400;
 }
 
 .testimonials-area .section-title-wrapper {
   color: #fff;
+}
+
+.section-title-wrapper2{
+  display:flex;
+  justify-content:center;
+  padding-top:100px;
+  padding-bottom:20px;
 }
 
 .testimonials-area .section-title-wrapper .section-title {
@@ -1694,6 +1721,7 @@ section.testimonials-area {
 .author-meta {
   display: flex;
   align-items: center;
+  justify-content:space-between;
   gap: 15px;
   padding-top: 25px;
   border-top: 1px solid hwb(0deg 100% 0% / 10%);
@@ -1917,7 +1945,7 @@ a.primary-icon svg {
 
 .contact-info-box p {
   color: #fff;
-  font-weight: bold;
+  font-weight: semibold;
   font-size: 20px;
   margin-bottom: 0;
 }
@@ -2134,15 +2162,14 @@ h2.accordion-header button span {
 }
 
 .theme_btn:hover {
-  background-color: #fff;
+  background-color: #fff !important;
   color: #333;
+  
 }
 
 .theme_btn {
   transition: 0.3s;
 }
-
-
 
 section.wehelp {
   position: relative;
@@ -2253,6 +2280,51 @@ section.wehelp {
   }
 }
 
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* default 1 column */
+  gap: 20px;
+}
+.project-top{
+  margin-top:40px;
+}
+/* Tablet */
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* default 1 column */
+  gap: 20px;
+}
+.service-top{
+  margin-top:-50px;
+}
+/* Tablet */
+@media (min-width: 768px) {
+  .project-gridv {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .project-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 .services p {
   font-weight: 400;
   font-size: 18px;
@@ -2276,6 +2348,7 @@ section.wehelp {
   position: relative;
   overflow: hidden;
   z-index: 2 !important;
+  margin-top: 120px;
 }
 
 .blub-main {
@@ -2741,7 +2814,7 @@ section.team {
 }
 
 .post {
-  font-weight:400 !important;
+  font-weight: 400 !important;
   font-size: 16px !important;
   line-height: 1.6;
 }
@@ -2761,7 +2834,6 @@ section.team {
 
   overflow: hidden;
   margin-top: 80px;
-  
 }
 
 .team-row {
@@ -2771,13 +2843,16 @@ section.team {
   margin-bottom: 0 !important;
 }
 
+.pt{
+    padding-top:150px;
+}
+
 .about_banner_area {
-  height: 700px;
+  height: 600px;
   display: flex;
   border-bottom-left-radius: 90px;
   border-bottom-right-radius: 90px;
-  align-items: center;
-  justify-content: center;
+
   position: relative;
   z-index: 2;
 
@@ -2834,7 +2909,6 @@ section.team {
   z-index: 2;
 }
 
-
 .about h6 {
   font-weight: 400;
   font-style: normal;
@@ -2855,13 +2929,12 @@ section.team {
 
 .about {
   opacity: 1;
-
   position: relative;
   z-index: 2 !important;
 }
 
-.optional_text{
-  display:none !important;
+.optional_text {
+  display: none !important;
 }
 
 @media (max-width: 991px) {
@@ -2871,72 +2944,157 @@ section.team {
 }
 
 @media (max-width: 767px) {
-  
   .about h2 {
-   font-size: 32px;
-   padding-bottom:10px;
-   text-align: center;
+    font-size: 32px;
+    padding-bottom: 10px;
+    text-align: center;
   }
 
-  .about h6{
-font-size: 20px;
-text-align: center;
+  .about h6 {
+    font-size: 20px;
+    text-align: center;
   }
 
-  .about p{
-font-size: 16px;
-
+  .about p {
+    font-size: 16px;
   }
 
-  .about_banner_image{
-     position: absolute;
-  left: 100px;
-  bottom: -10px;
-  z-index: -1;
+  .about_banner_image {
+    position: absolute;
+    left: 100px;
+    bottom: -10px;
+    z-index: -1;
   }
- 
 
-  .optional_text{
-  display:block !important;
+  .optional_text {
+    display: block !important;
+  }
+
+  .about_banner_area {
+    height: 600px;
+    display: flex;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding-top: 50px;
+  }
+  .team p {
+    font-size: 18px;
+  }
+
+  .team h5 {
+    font-size: 32px;
+    line-height: 1.4;
+    margin-top: 20px;
+  }
+  .team-5 {
+    font-size: 30px !important;
+  }
+  .team-card {
+    padding: 7px 7px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 24px;
+    opacity: 1;
+  }
+
+  .team-container {
+    margin-top: 30px;
+  }
 }
 
- .about_banner_area {
-  height: 600px;
+
+.contact_banner_area {
+  height: 100%;
   display: flex;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  padding-top:50px;
-  
-  
-}
-.team p {
-  
-  font-size: 18px;
-  
+
+ 
+  position: relative;
+  z-index: 2;
+
+  overflow: hidden;
+  &:before {
+    content: "";
+    width: 166px;
+    height: 166px;
+    border-radius: 50%;
+
+    filter: blur(120px);
+    opacity: 0.8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+  }
 }
 
-.team h5 {
-  
-  font-size: 32px;
-  line-height: 1.4;
-  margin-top: 20px;
+.contact_banner_area {
+  position: relative;
+  z-index: 2;
 }
-.team-5{
-font-size: 30px !important;
-}
-.team-card {
- 
-  padding: 7px 7px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  gap: 24px;
+
+.banner_area:hover .spotlight2 {
   opacity: 1;
 }
 
-.team-container{
-   margin-top: 30px ;
+.spotlight3 {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  z-index: -1;
+
+  pointer-events: none;
+  opacity: 1;
+  background-image: radial-gradient(
+    circle at var(--clientX, 50%) var(--clientY, 50%),
+    rgba(0, 0, 0, 0.5) 0,
+    #010504 15em
+  );
+}
+
+.contact{
+  position:relative;
 }
 
 
+.contact-py{
+  padding-top:90px;
+  padding-bottom:90px;
 }
+
+.contact-center-img {
+  position: absolute;
+  top: 20%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.contact-corner-img {
+  position: absolute;
+  top: 20%;
+  right: -20%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.contact-left-img {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+ 
+  z-index: 2;
+}
+.contact-bottom-img{
+  position: absolute;
+ bottom:-45%;
+ left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.contact-vector-img{
+  position: absolute;
+ bottom:16%;
+ right:-5%;
+  
+  z-index: 1;
+}
+
 

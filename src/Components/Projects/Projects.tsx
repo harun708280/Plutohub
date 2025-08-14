@@ -122,7 +122,7 @@ const Projects = () => {
           </Col>
           <Col sm={8}>
             <h2 className='title title_animation4'>
-              Not just ideas—see the results in action
+             Take a look at the projects that have turned our clients' ideas into remarkable success stories!
             </h2>
             <Buttons links='#' btnText='View All Projects' />
           </Col>

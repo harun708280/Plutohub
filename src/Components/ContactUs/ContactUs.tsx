@@ -1,3 +1,4 @@
+
 'use client'
 import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
@@ -6,48 +7,107 @@ import { Col, Container, Row } from 'react-bootstrap'
 import { useEffect, useRef } from 'react'
 import Buttons from '../Banner/Buttons'
 import { usePathname } from 'next/navigation'
-const ContactSection = () => {
-  const contactShapeRef = useRef(null)
+
+
+
+const ContactUs = () => {
+const blubRef = useRef<HTMLImageElement>(null);
+  
 
   useEffect(() => {
-    const handleMouseMove = (e) => {
-      if (contactShapeRef.current) {
-        const { clientX, clientY } = e
-        const { innerWidth, innerHeight } = window
+    // Animate "Design" by character with different animations for each
+ 
 
-        // Calculate movement based on mouse position (normalized to -1 to 1)
-        const xPercent = (clientX / innerWidth - 0.5) * 2
-        const yPercent = (clientY / innerHeight - 0.5) * 2
+    // Drop and bounce animation for "Develop" - same for all characters
+  
 
-        // Apply movement with reduced intensity for subtle effect
-        const moveX = xPercent * 20 // Max 20px movement
-        const moveY = yPercent * 15 // Max 15px movement
+    // Loop color changes for "Dominate" every 7 seconds
+   
 
-        contactShapeRef.current.style.transform = `translate(${moveX}px, ${moveY}px)`
+    // Mouse move parallax effect
+    const handleMouseMove = (e: MouseEvent) => {
+      const banner = document.querySelector(
+        ".contact_banner_area"
+      ) as HTMLElement | null;
+      if (banner) {
+        banner.style.setProperty("--clientX", `${e.clientX}px`);
+        banner.style.setProperty("--clientY", `${e.clientY}px`);
       }
-    }
 
-    // Add event listener
-    window.addEventListener('mousemove', handleMouseMove)
+      const { clientX, clientY } = e;
+      const { innerWidth, innerHeight } = window;
+      const xPos = (clientX / innerWidth - 0.5) * 2;
+      const yPos = (clientY / innerHeight - 0.5) * 2;
 
-    // Cleanup
-    return () => {
-      window.removeEventListener('mousemove', handleMouseMove)
-    }
-  }, [])
+      if (blubRef.current) {
+        gsap.to(blubRef.current, {
+          duration: 0.8,
+          x: xPos * 20,
+          y: yPos * 15,
+          rotation: xPos * 5,
+          ease: "power2.out",
+        });
+      }
+
+     
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+    return () => document.removeEventListener("mousemove", handleMouseMove);
+  }, []);
+  
 
 
    const pathname = usePathname()
 
   return (
     <section
-      className='contact-section'
+      className='contact_banner_area contact con'
       
-      style={{ backgroundImage: 'url(/images/contact-bg.jpg)' }}
+     
     >
+        <Image
+              src="/images/contact-vector.png"
+              width={241}
+              height={236}
+              alt="screw"
+              className="contact-vector-img"
+            />
+        <Image
+              src="/images/AboutBannerEl.png"
+              width={500}
+              height={500}
+              alt="screw"
+              className="contact-center-img"
+            />
+        <Image
+              src="/images/contact2-bg.png"
+              width={500}
+              height={500}
+              alt="screw"
+              className="contact-corner-img"
+            />
+        <Image
+              src="/images/contact-left-bg.png"
+              width={500}
+              height={500}
+              alt="screw"
+              className="contact-left-img"
+            />
+        <Image
+              src="/images/contactmainbg.png"
+              width={800}
+              height={600}
+              alt="screw"
+              className="contact-bottom-img"
+            />
+       <div
+        className="hero-image"
+        style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
+      ></div>
        {pathname !== '/contact' && (
       <Image
-        ref={contactShapeRef}
+       
         src='/images/contact-shape.png'
         width={373}
         height={324}
@@ -59,11 +119,15 @@ const ContactSection = () => {
         }}
       />
        )}
-      <Container>
-        <Row>
+
+
+
+       
+      <Container className='contact-py'>
+        <Row >
           <Col xl={12}>
             <div className={`${pathname==='/contact'?"section-title-wrapper2":"section-title-wrapper"}`}>
-              <h2 className='title'>
+              <h2 className='title '>
                 Have a{' '}
                 <span className='green-text'>
                   Pr
@@ -221,8 +285,11 @@ const ContactSection = () => {
           </Col>
         </Row>
       </Container>
+    
+
+      <div className="spotlight3"></div>
     </section>
   )
 }
 
-export default ContactSection
+export default ContactUs;

@@ -65,7 +65,7 @@ const Banner = () => {
         alt="screw"
         className="banner-center-img"
       />
-      <Container>
+      <Container className="pt">
         <Row className="d-flex justify-content-center align-items-center">
           <Col>
             <div className=" ">
@@ -80,7 +80,7 @@ const Banner = () => {
               </div>
             </div>
           </Col>
-          <Col className="d-flex justify-content-center align-items-center about_banner_image">
+          <Col sm={3} className="d-flex justify-content-center align-items-center about_banner_image " style={{ opacity: 0.40 }}>
             <Image
               src="/images/about-p.png"
               width={290}

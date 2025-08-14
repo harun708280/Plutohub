@@ -16,10 +16,11 @@ const TestimonialsSection = () => {
   const sliderSettings = {
     dots: true,
     arrows: true,
-    infinite: false,
+    infinite: true,
+    autoplay: true,
     speed: 500,
     slidesToScroll: 1,
-    slidesToShow: 2, 
+    slidesToShow: 3, 
     responsive: [
       {
         breakpoint: 767,
@@ -43,47 +44,83 @@ const TestimonialsSection = () => {
     sliderRef.current?.slickNext();
   };
 
-  const testimonialsData = [
-    {
-      id: 1,
-      message:
-        "“We are pleased with the quality and comprehensiveness of the outcomes, as well as the ongoing support. The team recognized the limitations of mobile and web app development, avoiding overly flashy designs that complicate front-end coding.”",
-      authorName: "Khaled Belkadi",
-      authorRole: "Project Manager",
-      authorImage: "/images/author-avatar.svg",
-    },
-    {
-      id: 2,
-      message:
-        "“We are pleased with the quality and comprehensiveness of the outcomes, as well as the ongoing support. The team recognized the limitations of mobile and web app development, avoiding overly flashy designs that complicate front-end coding.”",
-      authorName: "Sarah Johnson",
-      authorRole: "Product Owner",
-      authorImage: "/images/author-avatar.svg",
-    },
-    {
-      id: 3,
-      message:
-        "T“We are pleased with the quality and comprehensiveness of the outcomes, as well as the ongoing support. The team recognized the limitations of mobile and web app development, avoiding overly flashy designs that complicate front-end coding.”",
-      authorName: "Michael Smith",
-      authorRole: "CTO",
-      authorImage: "/images/author-avatar.svg",
-    },
-    {
-      id: 4,
-      message:
-        "T“We are pleased with the quality and comprehensiveness of the outcomes, as well as the ongoing support. The team recognized the limitations of mobile and web app development, avoiding overly flashy designs that complicate front-end coding.”",
-      authorName: "Michael Smith",
-      authorRole: "CTO",
-      authorImage: "/images/author-avatar.svg",
-    },
-    {
-      id: 5,
-      message:
-        "T“We are pleased with the quality and comprehensiveness of the outcomes, as well as the ongoing support. The team recognized the limitations of mobile and web app development, avoiding overly flashy designs that complicate front-end coding.”",
-      authorName: "Michael Smith",
-      authorRole: "CTO",
-      authorImage: "/images/author-avatar.svg",
-    },
+ 
+    const testimonialsData = [
+  {
+    id: 1,
+    rating: 5,
+    message:
+      "PlutoHub has been outstanding as always! The team was incredibly kind and even offered me a discount since we've worked together before. After my previous website was lost due to hosting issues and no backup, they rebuilt everything beautifully. The design quality is exceptional, just like our past projects. I'll continue working with PlutoHub in the future!",
+    authorName: "Martin Kovács",
+    authorRole: "Founder & CEO",
+  },
+  {
+    id: 2,
+    rating: 5,
+    message:
+      "From the very first message, the PlutoHub team made the entire process smooth and enjoyable. Their communication was clear, professional, and friendly, which made me feel confident about the project. I needed a high-quality mockup for my website, and not only did they capture my vision perfectly, but they also added their creative touch that made the design even better than I imagined.",
+    authorName: "Theo Rizzo",
+    authorRole: "Marketing Director",
+  },
+  {
+    id: 3,
+    rating: 5,
+    message:
+      "Working with PlutoHub was just easy and stress-free. The team got what I was looking for and brought a ton of creativity to the table. They were open to feedback, super cooperative, and made the whole process feel effortless. I'm pleased with how everything turned out.",
+    authorName: "Robin Bak",
+    authorRole: "Operations Manager",
+  },
+  {
+    id: 4,
+    rating: 5,
+    message:
+      "I’m so impressed with the work PlutoHub did for us. The website looks impressive, but it wasn't just the design — the whole experience was smooth from start to finish. They were friendly, quick to respond, and delivered exactly when they said they would. Everything just clicked, and I couldn't be happier.",
+    authorName: "Ingo Just",
+    authorRole: "Founder",
+  },
+  {
+    id: 5,
+    rating: 5,
+    message:
+      "PlutoHub really nailed our website design. The team made sure everything lined up perfectly with our brand, and the whole process felt smooth from start to finish. Communication was easy, they were super polite and professional, and it honestly felt like working with a partner who cared about the end result as much as we did. Definitely recommend.",
+    authorName: "Sam Moshe",
+    authorRole: "Brand Manager",
+  },
+  {
+    id: 6,
+    rating: 5,
+    message:
+      "I had a great experience working with the PlutoHub team. They quickly understood my vision and turned it into a clean, user-friendly design that matched the vibe I was going for. They were responsive, open to ideas, and added creative touches that really elevated the project. Couldn’t have asked for a better collaboration.",
+    authorName: "William Gam",
+    authorRole: "Founder",
+  },
+  {
+    id: 7,
+    rating: 5,
+    message:
+      "Working with PlutoHub was a great experience. The team quickly understood my vision and turned it into a clean, user-friendly design that matched exactly what I had in mind. They were easy to communicate with, open to feedback, and added creative touches that made the final result even better.",
+    authorName: "William Gam",
+    authorRole: "Founder",
+  },
+  {
+    id: 8,
+    rating: 5,
+    message:
+      "PlutoHub delivered a website design that hit the mark — aligned with our brand, visually appealing, and much more polished than before. The process was smooth from start to finish, thanks to their quick responses, timely delivery, and friendly approach.",
+    authorName: "Chris Gourlay",
+    authorRole: "Creative Lead",
+  },
+  {
+    id: 9,
+    rating: 5,
+    message:
+      "The PlutoHub team was an absolute pleasure to work with. Even after multiple revisions, they stayed calm, kind, and focused on getting everything right. They really put in the effort to make sure the design matched exactly what we needed. Highly recommend them for anyone looking for a team that listens and delivers.",
+    authorName: "Aleks Novak",
+    authorRole: "Marketing Manager",
+  },
+
+
+    
   ];
 
   const testiMonialShapeRef = useRef(null);
@@ -197,17 +234,18 @@ const TestimonialsSection = () => {
                     right: "24px",
                   }}
                 >
-                  <Image
-                    src={testimonial.authorImage}
-                    width={50}
-                    height={50}
-                    alt={testimonial.authorName}
-                    className="rounded-circle author-avatar"
-                  />
+                  
                   <div className="author-info">
                     <h4 className="mb-0">{testimonial.authorName}</h4>
                     <p className="mb-0">{testimonial.authorRole}</p>
                   </div>
+                   <Image
+                  src="/images/5start.png"
+                  width={120}
+                  height={24}
+                  alt="quote"
+                  className="mb-3"
+                />
                 </div>
               </div>
             </div>
@@ -217,41 +255,7 @@ const TestimonialsSection = () => {
 
       </Container>
 
-      <Container>
-        <Row className="text-center">
-          <Col xl={12}>
-            <div className="testi-navigation">
-              <div className="">
-                {testimonialsData.map((_, index) => (
-                  <span
-                    key={index}
-                    className={`testi-dot ${
-                      index === currentSlide ? "active" : ""
-                    }`}
-                    onClick={() => handleDotClick(index)}
-                  />
-                ))}
-              </div>
-              <div className="testi-nav">
-                <span
-                  className="testi-arrow-left"
-                  onClick={handlePrevClick}
-                  style={{ cursor: "pointer" }}
-                >
-                  <MoveLeft />
-                </span>
-                <span
-                  className="testi-arrow-right"
-                  onClick={handleNextClick}
-                  style={{ cursor: "pointer" }}
-                >
-                  <MoveRight />
-                </span>
-              </div>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      
     </section>
   );
 };

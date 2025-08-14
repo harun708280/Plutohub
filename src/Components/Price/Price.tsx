@@ -277,7 +277,7 @@ const Price = () => {
             <div className='quoted_box box'>
               <div className='quote_img'>
                 <Image
-                  src='/images/quote_img.jpg'
+                  src='/images/audit.png'
                   alt='quote-img'
                   width={600}
                   height={500}
@@ -285,8 +285,7 @@ const Price = () => {
               </div>
               <h3>Are you interested in a quoted project?</h3>
               <p>
-                Let’s kick things off with a quick design preview—no pressure,
-                no strings.
+               Start with a UI/UX design and if we’re fit for your needs without any major commitment.
               </p>
               <Buttons links='#' btnText='Get a Quote' />
             </div>

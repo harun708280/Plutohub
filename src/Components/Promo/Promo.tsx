@@ -68,22 +68,15 @@ const Promo = () => {
           <Col md={6}>
             <div className='promo_content'>
               <h2 className='title'>
-                Smart, Simple, Stunning. That&apos;s how we design.
+               Innovative design is our tool to reshape business
               </h2>
               <p>
-                Design is more than visuals; it&apos;s how users feel.
-                That&apos;s why we shape every detail to make your product easy
-                and enjoyable.
+                We’re a passionate team of UI/UX designers dedicated to creating intuitive digital experiences. With years of experience, we blend creativity and strategy to design solutions that engage users and drive business success.
               </p>
               <p>
-                If you&apos;re starting something new or giving your brand a
-                fresh look, we&apos;re here to help you make it functional,
-                beautiful, and built to win.
+               We turn ideas into seamless, Beautiful designs. Let’s build digital experiences that not only look stunning but also deliver real results.
               </p>
-              <p>
-                Let’s build digital experiences that not only look stunning but
-                also deliver real results.
-              </p>
+              
               <Buttons links='#' btnText='More About Us' />
             </div>
           </Col>
