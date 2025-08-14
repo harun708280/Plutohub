@@ -155,7 +155,7 @@ const TestimonialsSection = () => {
   return (
     <section
       className="testimonials-area testimonail"
-      style={{ background: "url(/images/testimonial-section-bg.png)" }}
+      
     >
       <Image
         ref={testiMonialShapeRef}
@@ -211,11 +211,7 @@ const TestimonialsSection = () => {
             <div key={testimonial.id}>
               <div
                 className="single-testimonial-item p-4 text-white rounded position-relative"
-                style={{
-                  backgroundImage: "url(/images/testimonial-bg.png)",
-                  backgroundSize: "100% 100%",
-                  backgroundRepeat: "no-repeat",
-                }}
+                
               >
                 <Image
                   src="/images/quote-left.svg"
