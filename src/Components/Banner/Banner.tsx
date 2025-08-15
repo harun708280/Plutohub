@@ -278,7 +278,10 @@ const Banner = () => {
                 </span>{' '}
                 the Digital Space
               </h2>
-              
+              <p className="optional_text2">
+                                We Create Unique Digital Experiences For Global Brands By
+                                Integrating AI, Innovative Design, And Advanced Technology.
+                              </p>
               <Buttons links='#' btnText='Lets Explore Our Services' />
               <Image
                 ref={screwRef}
