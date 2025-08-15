@@ -278,6 +278,7 @@ const Banner = () => {
                 </span>{' '}
                 the Digital Space
               </h2>
+              
               <Buttons links='#' btnText='Lets Explore Our Services' />
               <Image
                 ref={screwRef}

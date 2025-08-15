@@ -104,6 +104,10 @@ img.blub-banner {
   position: relative;
 }
 
+.optional_text2{
+  position: relative;
+}
+
 .char {
   display: inline-block;
   transform-origin: center;
@@ -2646,6 +2650,8 @@ section.WhyPlutohub {
     overflow: hidden;
   }
 
+
+
   .aq-thumb {
     display: none !important;
   }
@@ -2660,6 +2666,40 @@ section.WhyPlutohub {
     line-height: 1.4;
     margin-bottom: 0px;
   }
+.fact_item {
+  background: #141b29;
+  padding: 30px;
+  height: 100%;
+  clip-path: polygon(
+    0px 0,
+    100% 0,
+    100% calc(100% - 35px),
+    calc(100% - 35px) 100%,
+    0 100%,
+    0 0px
+  );
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    width: 300px;
+    height: 220px;
+    border-radius: 50%;
+    background: var(--hoverColor);
+    filter: blur(140px);
+    position: absolute;
+    left: -25px;
+    top: -25px;
+    transition: all 0.3s linear;
+    z-index: -1;
+  }
+
+ 
+  
+}
+
+
 }
 
 .IndustriesServe {
