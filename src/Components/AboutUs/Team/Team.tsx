@@ -36,13 +36,16 @@ const Team = () => {
           {data.map((member, index) => (
             <Col key={index} sm={6} md={4} lg={3}>
               <div className="team-card text-center">
-                <Image
+               <div>
+                 <Image
                   src={member.img}
                   width={267}
                   height={260}
                   alt={member.name}
                   className=" "
+                  layout="responsive"
                 />
+               </div>
                 <h6 className="name">{member.name}</h6>
                 <p className="post">{member.post}</p>
               </div>

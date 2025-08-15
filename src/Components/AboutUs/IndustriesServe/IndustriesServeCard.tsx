@@ -91,7 +91,7 @@ const IndustriesServeCard = () => {
           {testimonialsData.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="industry-card d-flex flex-column align-items-center gap-3 text-center idus_why_fact_item"
+              className="industry-card d-flex flex-column align-items-center  text-center idus_why_fact_item no-margin"
             >
               <div className="industry-image-wrapper">
                 <Image
