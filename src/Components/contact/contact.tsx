@@ -81,7 +81,7 @@ const ContactSection = () => {
           </Col>
         </Row>
 
-        <Row className="gx-5">
+        <Row className="gx-5 gy-4">
           {/* col 01 */}
           <Col xl={4} lg={5} >
             <div className='contact-info'>
