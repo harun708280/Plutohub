@@ -171,7 +171,7 @@ const TestimonialsSection = () => {
           <Col md={4} xs={12}>
             <div className="section-title-wrapper">
               <h2 className="section-title">
-                What Clients <br />
+                What Clients <br className="br-option" />
                 <span>
                   L
                   <Image

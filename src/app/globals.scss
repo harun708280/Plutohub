@@ -67,21 +67,11 @@ $title_color: #00234b;
 
   @media (max-width: 767px) {
     padding: 80px 0px;
-
-
-
   }
- 
-  
 }
 
-
 @media (max-width: 767px) {
-    
-
-
-
-  }
+}
 
 // banner_area css
 .banner_area {
@@ -116,8 +106,6 @@ img.blub-banner {
 .banner_content h2 {
   position: relative;
 }
-
-
 
 .char {
   display: inline-block;
@@ -286,6 +274,17 @@ span.animated-dominate {
   }
 }
 
+@media (max-width: 767px) {
+  .sub_title {
+    font-size: 20px;
+  }
+  .fact_item h3 {
+    font-size: 48px;
+
+    margin-bottom: 20px;
+  }
+}
+
 .client_logo_area {
   overflow: hidden;
   padding: 100px 0px;
@@ -298,13 +297,22 @@ span.animated-dominate {
   }
 }
 
-@media (max-width: 767px) {
-    
-  .client_logo_area {
-    padding:60px 0;
-  }
+.br-option {
+  display: block;
 }
 
+@media (max-width: 767px) {
+  .client_logo_area {
+    padding: 60px 0;
+  }
+  .client_logo_area h4 {
+    font-size: 16px;
+  }
+
+  .br-option {
+    display: none;
+  }
+}
 
 .client_logo_slider {
   display: flex;
@@ -344,17 +352,11 @@ span.animated-dominate {
   overflow: hidden;
 }
 
-
-
-
 @media (max-width: 767px) {
-   .sec_padding {
-  padding: 60px 0px !important;
-
-}
-
+  .sec_padding {
+    padding: 60px 0px !important;
   }
-
+}
 
 // .project_wrapper,
 // .service_wrapper {
@@ -490,9 +492,6 @@ span.animated-dominate {
 
     .ser_content {
       padding: 20px 20px 10px;
-
-
-
 
       h3 {
         font-size: 32px;
@@ -982,8 +981,7 @@ footer {
   background-position: center;
 }
 
-
-.optional_text2{
+.optional_text2 {
   display: none;
   position: relative;
 }
@@ -999,11 +997,17 @@ footer {
 }
 
 @media (max-width: 767px) {
-.optional_text2{
-  display: block;
-  margin-top:-30px;
- 
-}
+  .optional_text2 {
+    display: block;
+    margin-top: -30px;
+    font-size: 14px;
+    font-weight: 400px;
+  }
+
+  .project_item .pr_content h3 {
+    font-size: 20px;
+  }
+
   .footer-top {
     padding-top: 50px;
   }
@@ -1488,9 +1492,8 @@ header {
 }
 @media (max-width: 767px) {
   .banner_content h2 {
-    font-size: 36px;
+    font-size: 32px;
     line-height: 120%;
-
   }
 
   img.blub-banner {
@@ -1530,8 +1533,11 @@ section.P_about_area.about_area {
   section.P_about_area.about_area .title,
   .project_area .title,
   .service_area .title {
-    font-size: 22px;
+    font-size: 30px;
     margin-top: 10px;
+  }
+  .title {
+    font-size: 30px;
   }
 }
 
@@ -1662,8 +1668,6 @@ section.testimonials-area {
 
   clip-path: polygon(100% 0, 100% 90%, 90% 100%, 0 100%, 0 0);
 }
-
-
 
 .no-margin-right {
   padding: 0 !important;
@@ -1808,7 +1812,14 @@ section.testimonials-area {
   padding-bottom: 25px;
 }
 
-
+@media (max-width: 767px) {
+  .section-title-wrapper .title {
+    text-align: center;
+  }
+  .faq-section .title {
+    text-align: center;
+  }
+}
 
 /* Tablet */
 @media (max-width: 991px) {
@@ -1828,34 +1839,26 @@ section.testimonials-area {
   }
 
   .testimonials-area {
-  padding-top: 60px;
-  padding-botom: 0px !important;
- 
+    padding-top: 60px;
+    padding-botom: 0px !important;
+  }
 }
-
- 
-}
-
-
 
 @media (max-width: 767px) {
   .testimonials-area {
-  padding: 60px 0;
- 
- 
-}
+    padding: 60px 0;
+  }
   .single-testimonial-item {
     width: 100% !important;
     height: 500px;
-   
+
     background-size: cover;
   }
 
   .testimonial-shape {
-        top: 230px;
-        max-width: 200px;
-    }
-  
+    top: 230px;
+    max-width: 200px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -2055,8 +2058,8 @@ textarea:focus {
 
 @media (max-width: 767px) {
   .contact-info-bottom {
-  margin-top: 0px;
-}
+    margin-top: 0px;
+  }
 }
 
 .contact-info {
@@ -2100,7 +2103,6 @@ span.green-text {
     margin-top: 30px;
   }
 
- 
   img.contact-shape {
     display: none;
   }
@@ -2211,6 +2213,25 @@ h2.accordion-header button span {
 @media (max-width: 767px) {
   section.faq-section img {
     display: none;
+  }
+
+  button.accordion-button {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .accordion-body {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  section.faq-section {
+    padding: 60px 0;
+  }
+
+  accordion-body {
+    font-size: 16px;
+    font-weight: 400px;
   }
 }
 
@@ -2409,10 +2430,14 @@ section.wehelp {
 }
 
 @media (max-width: 767px) {
-   .services{
-    margin-top:60px;
-   }
+  .services {
+    margin-top: 60px;
   }
+  .services h6 {
+    font-size: 300px;
+    text-align: left !important;
+  }
+}
 
 .blub-main {
   position: relative;
@@ -2944,17 +2969,16 @@ section.team {
   padding-top: 150px;
 }
 
-.team-member-img{
-  weight:267px;
-  height:260px;
+.team-member-img {
+  weight: 267px;
+  height: 260px;
 }
-
 
 @media (max-width: 767px) {
-   .pt {
-  padding-top: 100px;
-}
+  .pt {
+    padding-top: 100px;
   }
+}
 
 .about_banner_area {
   height: 600px;
@@ -3167,10 +3191,6 @@ section.team {
   padding-bottom: 90px;
 }
 
-
-
-
-
 .contact-center-img {
   position: absolute;
   top: 20%;
@@ -3203,21 +3223,19 @@ section.team {
   position: absolute;
   bottom: 16%;
   right: -5%;
-  display:block;
+  display: block;
 
   z-index: 1;
 }
 @media (max-width: 767px) {
   .contact-py {
-  padding-top: 20px;
-  padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+  .contact-vector-img {
+    display: none;
+  }
 }
-.contact-vector-img {
- 
-  display:none;
 
-}
-
-
-
+@media (max-width: 767px) {
 }

@@ -41,7 +41,7 @@ const Drives = () => {
               className="drives-bg"
             />
             <h5 className="">
-              What Drives Us <br /> Forward
+              What Drives Us <br className="br-option" /> Forward
             </h5>
           </Col>
           <Col sm={8}>
