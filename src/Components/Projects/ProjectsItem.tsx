@@ -36,18 +36,18 @@ const ProjectsItem = () => {
     ],
   };
   return (
-    <div className="project_wrapper">
-      <div className="project-grid">
+    <div className='project_wrapper'>
+      <div className='project-grid'>
         <a
-          href="https://www.behance.net/gallery/230888791/Quantafit-AI-Fitness-app"
-          target="_blank"
-          className="project_item"
+          href='https://www.behance.net/gallery/230888791/Quantafit-AI-Fitness-app'
+          target='_blank'
+          className='project_item'
         >
-          <div className="pr_image">
-            <Image src={Primage1} alt="pr1" height={330} width={600}/>
+          <div className='pr_image'>
+            <Image src={Primage1} alt='pr1' />
           </div>
-          <div className="pr_content">
-            <h3 className="ph-text">FinVault – Personal Finance App</h3>
+          <div className='pr_content'>
+            <h3 className='ph-text'>FinVault – Personal Finance App</h3>
 
             <p>
               Meet Quantafit — an AI-powered fitness app that creates
@@ -59,17 +59,16 @@ const ProjectsItem = () => {
         </a>
 
         <a
-          href="https://dribbble.com/shots/25683228-Kayaking-Landing-Page"
-          target="_blank"
-          className="project_item"
+          href='https://dribbble.com/shots/25683228-Kayaking-Landing-Page'
+          target='_blank'
+          className='project_item'
         >
-          <div className="pr_image">
-            <Image src={Primage2} alt="pr1" height={330} width={600} />
+          <div className='pr_image'>
+            <Image src={Primage2} alt='pr1' />
           </div>
-          <div className="pr_content">
-         
-              <h3>Kayaking Landing Page</h3>
-            
+          <div className='pr_content'>
+            <h3>Kayaking Landing Page</h3>
+
             <p>
               We made this kayaking landing page to help you find your next
               adventure easily. Our goal was to make booking your trip simple
@@ -78,23 +77,20 @@ const ProjectsItem = () => {
             </p>
           </div>
         </a>
-      </div>
-      <div className="project-grid project-top">
         <a
-          href="https://dribbble.com/shots/25469638-AI-Creativity-Landing-Page
-"
-          target="_blank"
-          className="project_item"
+          href='https://dribbble.com/shots/25469638-AI-Creativity-Landing-Page
+'
+          target='_blank'
+          className='project_item'
         >
-          <div className="pr_image">
-            <Image src={Primage3} alt="pr1" height={330} width={600} />
+          <div className='pr_image'>
+            <Image src={Primage3} alt='pr1' />
           </div>
-          <div className="pr_content">
-            
-              <h3 className="ph-text">
-                AI Creativity: Unlock Your Creative Potential
-              </h3>
-           
+          <div className='pr_content'>
+            <h3 className='ph-text'>
+              AI Creativity: Unlock Your Creative Potential
+            </h3>
+
             <p>
               These AI tools automate tasks and create stunning visuals in
               minutes, making your work easier, faster, and more creative.
@@ -102,21 +98,60 @@ const ProjectsItem = () => {
           </div>
         </a>
         <a
-          href="https://dribbble.com/shots/25672112-Hotel-Booking-Landing-Page"
-          target="_blank"
-          className="project_item"
+          href='https://dribbble.com/shots/25672112-Hotel-Booking-Landing-Page'
+          target='_blank'
+          className='project_item'
         >
-          <div className="pr_image">
-            <Image src={Primage4} alt="pr1" height={330} width={600} />
+          <div className='pr_image'>
+            <Image src={Primage4} alt='pr1' />
           </div>
-          <div className="pr_content">
-           
-              <h3 className="ph-text">
-               Hotel Booking Landing Page
-              </h3>
-           
+          <div className='pr_content'>
+            <h3 className='ph-text'>Hotel Booking Landing Page</h3>
+
             <p>
-              We designed this hotel booking landing page to make finding the perfect stay easy and stress-free. Because booking a getaway should feel as good as the trip itself!
+              We designed this hotel booking landing page to make finding the
+              perfect stay easy and stress-free. Because booking a getaway
+              should feel as good as the trip itself!
+            </p>
+          </div>
+        </a>
+      </div>
+      <div className='project-grid project-top d-none'>
+        <a
+          href='https://dribbble.com/shots/25469638-AI-Creativity-Landing-Page
+'
+          target='_blank'
+          className='project_item'
+        >
+          <div className='pr_image'>
+            <Image src={Primage3} alt='pr1' height={330} width={600} />
+          </div>
+          <div className='pr_content'>
+            <h3 className='ph-text'>
+              AI Creativity: Unlock Your Creative Potential
+            </h3>
+
+            <p>
+              These AI tools automate tasks and create stunning visuals in
+              minutes, making your work easier, faster, and more creative.
+            </p>
+          </div>
+        </a>
+        <a
+          href='https://dribbble.com/shots/25672112-Hotel-Booking-Landing-Page'
+          target='_blank'
+          className='project_item'
+        >
+          <div className='pr_image'>
+            <Image src={Primage4} alt='pr1' height={330} width={600} />
+          </div>
+          <div className='pr_content'>
+            <h3 className='ph-text'>Hotel Booking Landing Page</h3>
+
+            <p>
+              We designed this hotel booking landing page to make finding the
+              perfect stay easy and stress-free. Because booking a getaway
+              should feel as good as the trip itself!
             </p>
           </div>
         </a>
