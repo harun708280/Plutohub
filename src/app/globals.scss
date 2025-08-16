@@ -452,19 +452,16 @@ span.animated-dominate {
 
 // .service area css
 .service_flip_item {
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  perspective: 1000px;
-  -webkit-perspective: 1000px;
-
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  border-radius: 25px;
+  
   .flip_box_font,
   .flip_box_back {
     background-size: cover;
     background-position: center;
     border-radius: 25px;
-    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
-    backface-visibility: hidden;
     clip-path: polygon(
       0px 0,
       100% 0,
@@ -479,20 +476,19 @@ span.animated-dominate {
     background: #fff;
     padding: 25px;
     height: 100%;
+    position: relative;
+    z-index: 1;
 
-    .ser_image {
-      img {
-        border-radius: 12px;
-        min-height: 400px;
-        max-height: 400px;
-        width: 100%;
-        object-fit: cover;
-      }
+    .ser_image img {
+      border-radius: 12px;
+      min-height: 400px;
+      max-height: 400px;
+      width: 100%;
+      object-fit: cover;
     }
 
     .ser_content {
       padding: 20px 20px 10px;
-
       h3 {
         font-size: 32px;
         font-weight: 600;
@@ -503,22 +499,23 @@ span.animated-dominate {
 
   .flip_box_back {
     position: absolute;
-    top: 0;
     left: 0;
+    bottom: -100%;   
     width: 100%;
-    transform: rotateY(180deg);
-    transform-style: preserve-3d;
+    height: 100%;
     background: #00b67a;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 30px;
+    transition: bottom 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 2;
 
     h3 {
       font-size: 32px;
       font-weight: 600;
       margin-bottom: 22px;
+      color: #fff;
     }
 
     p {
@@ -529,12 +526,12 @@ span.animated-dominate {
 
     ul {
       margin-bottom: 25px;
-
       li {
         color: #fff;
         font-size: 20px;
         margin-top: 8px;
-
+        display: flex;
+        align-items: center;
         img {
           margin-right: 10px;
         }
@@ -558,17 +555,12 @@ span.animated-dominate {
   }
 
   &:hover {
-    .flip_box_font {
-      transform: rotateY(-180deg);
-      transform-style: preserve-3d;
-    }
-
     .flip_box_back {
-      transform: rotateY(0deg);
-      transform-style: preserve-3d;
+      bottom: 0;  
     }
   }
 }
+
 
 // pomo_area  css
 .pomo_area {

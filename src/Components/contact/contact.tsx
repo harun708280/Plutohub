@@ -116,16 +116,16 @@ const ContactSection = () => {
                   <div className='contact-info-box'>
                     <h5>Email</h5>
                     <p>
-                      <a target='_blank' href='mailto:hello@plutohub.com'>
-                        hello@plutohub.com
+                      <a target='_blank' href='mailto:hello@plutohub.agency'>
+                        hello@plutohub.agency
                       </a>
                     </p>
                   </div>
                   <div className='contact-info-box'>
                     <h5>Whatsapp</h5>
                     <p>
-                      <a target='_blank' href='https://wa.me/8801567666988'>
-                        +880 1567 6669 88
+                      <a target='_blank' href='https://wa.me/351937296113'>
+                        +351937296113
                       </a>
                     </p>
                   </div>

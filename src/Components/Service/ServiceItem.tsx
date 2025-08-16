@@ -53,6 +53,8 @@ const ProjectsItem = () => {
               </Link>
             </div>
           </div>
+
+          {/* ata asbay upore  */}
           <div className='flip_box_back'>
             <div className='middle'>
               <Link href='#'>

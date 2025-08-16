@@ -90,19 +90,7 @@ const ContactUs = () => {
         className="hero-image"
         style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
       ></div>
-      {pathname !== "/contact" && (
-        <Image
-          src="/images/contact-shape.png"
-          width={373}
-          height={324}
-          alt="Contact Shape"
-          className="contact-shape"
-          style={{
-            transition: "transform 0.1s ease-out",
-            willChange: "transform",
-          }}
-        />
-      )}
+    
 
       <Container className="contact-py">
         <Row>
@@ -168,16 +156,16 @@ const ContactUs = () => {
                   <div className="contact-info-box">
                     <h5>Email</h5>
                     <p>
-                      <a target="_blank" href="mailto:hello@plutohub.com">
-                        hello@plutohub.com
+                      <a target="_blank" href="mailto:hello@plutohub.agency">
+                        hello@plutohub.agency
                       </a>
                     </p>
                   </div>
                   <div className="contact-info-box">
                     <h5>Whatsapp</h5>
                     <p>
-                      <a target="_blank" href="https://wa.me/8801567666988">
-                        +880 1567 6669 88
+                      <a target="_blank" href="https://wa.me/351937296113">
+                        +351937296113
                       </a>
                     </p>
                   </div>

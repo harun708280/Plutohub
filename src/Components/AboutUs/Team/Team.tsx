@@ -6,26 +6,28 @@ import Buttons from "../../Banner/Buttons";
 
 const Team = () => {
   const data = [
-    {
-      img: "/images/ux.png",
-      name: "Saiful Islam",
-      post: "UI/UX Designer",
-    },
+    
     {
       img: "/images/shahin.png",
       name: "Shahinul Islam",
       post: "Founder & CEO",
     },
     {
-      img: "/images/Mehedi.png",
-      name: "Mehedi Hasan",
-      post: "UI/UX designer",
-    },
-    {
       img: "/images/MahmudKabir.png",
       name: "Mahmud Kabir",
-      post: "COO",
+      post: "Co-Founder & COO",
     },
+    {
+      img: "/images/Mehedi.png",
+      name: "Mehedi Hasan",
+      post: "Product Designer",
+    },
+    {
+      img: "/images/ux.png",
+      name: "Saiful Islam",
+      post: "UI/UX Designer",
+    },
+    
   ];
 
   return (
