@@ -122,7 +122,7 @@ const About = () => {
             />
           </Col>
           <Col sm={8}>
-            <h2 className='title title_animation'>
+            <h2 className='title title_animation4'>
               We create innovative digital products customized to your business
               needs. Our goal is to help you grow faster and easier.
             </h2>

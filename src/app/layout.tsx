@@ -6,6 +6,7 @@ import './globals.scss'
 import Footer from '../Components/shared/footer'
 import Layout from '../Components/Layout/Layout'
 import Header from '../Components/shared/header'
+import { Toaster } from 'sonner'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: '--font-plus-jakarta-sans',
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body>
         <Layout>
           <Header />
+          <Toaster position='bottom-right'/>
           {children}
           <Footer />
         </Layout>

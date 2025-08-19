@@ -10,7 +10,7 @@ import { useRef } from "react";
 import Buttons from "../../Banner/Buttons";
 import Counter from "../../Counter/Counter";
 
-const Services = () => {
+const AboutServices = () => {
   const aboutRef = useRef(null);
   const aboutShapeRef = useRef(null);
   const image2Ref = useRef(null);
@@ -170,4 +170,4 @@ const Services = () => {
     </section>
   );
 };
-export default Services;
+export default AboutServices;
