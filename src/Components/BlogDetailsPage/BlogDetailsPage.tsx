@@ -14,7 +14,7 @@ interface BlogDetailsPageProps {
 const BlogDetailsPage = ({ params }: BlogDetailsPageProps) => {
   return (
     <div className="container py-4 blog-details ">
-      
+      <h2>Blog ID: {params.id}</h2>
       <Tab.Container defaultActiveKey="stock">
         <div className="row">
           <div className="col-lg-3 mb-4">
