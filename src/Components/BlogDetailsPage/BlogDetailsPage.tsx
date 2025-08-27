@@ -6,13 +6,9 @@ import BlogContent from "./BlogContent/BlogContent";
 import RightSidebar from "./RightSidebar/RightSidebar";
 
 
-interface BlogDetailsPageProps {
-  params: {
-    id: string;
-  };
-}
 
-const BlogDetailsPage = ({ params }: BlogDetailsPageProps) => {
+
+const BlogDetailsPage = () => {
   return (
     <div className="container py-4 blog-details ">
       <Tab.Container defaultActiveKey="stock">
