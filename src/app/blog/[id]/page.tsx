@@ -1,18 +1,11 @@
-
-
 import BlogDetailsPage from "../../../Components/BlogDetailsPage/BlogDetailsPage";
 
-
-interface BlogDetailsProps {
+type PageProps = {
   params: {
     id: string;
   };
-}
-
-const page = ({ params }: BlogDetailsProps) => {
-  return (
-    <BlogDetailsPage params={params}/>
-  );
 };
 
-export default page;
+export default function Page({ params }: PageProps) {
+  return <BlogDetailsPage params={params} />;
+}
