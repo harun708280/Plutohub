@@ -5,20 +5,26 @@ import Image from "next/image";
 
 import { gsap } from "gsap";
 import Buttons from "../../Banner/Buttons";
+import Link from "next/link";
+type BreadcrumbItem = {
+  label: string;
+  href?: string; // optional (last item usually doesn’t need a link)
+};
 
-const Banner = () => {
+interface BannerProps {
+  breadcrumbs: BreadcrumbItem[];
+  title: string;
+}
+
+const Banner: React.FC<BannerProps> = ({ breadcrumbs, title }) => {
   const blubRef = useRef<HTMLImageElement>(null);
-  
 
   useEffect(() => {
     // Animate "Design" by character with different animations for each
- 
 
     // Drop and bounce animation for "Develop" - same for all characters
-  
 
     // Loop color changes for "Dominate" every 7 seconds
-   
 
     // Mouse move parallax effect
     const handleMouseMove = (e: MouseEvent) => {
@@ -44,8 +50,6 @@ const Banner = () => {
           ease: "power2.out",
         });
       }
-
-     
     };
 
     document.addEventListener("mousemove", handleMouseMove);
@@ -53,44 +57,67 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="about_banner_area about">
+    <section className='about_banner_area about'>
       <div
-        className="hero-image"
+        className='hero-image'
         style={{ backgroundImage: `url('/images/hero-bg.jpg')` }}
       ></div>
       <Image
-        src="/images/AboutBannerEl.png"
+        src='/images/AboutBannerEl.png'
         width={500}
         height={500}
-        alt="screw"
-        className="banner-center-img"
+        alt='screw'
+        className='banner-center-img'
       />
-      <Container className="pt">
-        <Row className="d-flex justify-content-center align-items-center">
+      <Container className='pt'>
+        <Row className='d-flex justify-content-center align-items-center'>
           <Col>
-            <div className=" ">
-              <h6>Home / About us</h6>
-              <h2> We Help Brands Launch, Scale, And Lead Through Design</h2>
-              <div className="optional_text d-flex flex-column align-items-center justify-content-center text-center">
+            <div className=' '>
+              {/* Dynamic Breadcrumb */}
+              <nav className='breadcrumb' aria-label='Breadcrumb'>
+                <ol>
+                  {breadcrumbs.map((crumb, index) => {
+                    const isLast = index === breadcrumbs.length - 1;
+                    return (
+                      <li
+                        key={index}
+                        aria-current={isLast ? "page" : undefined}
+                      >
+                        {isLast || !crumb.href ? (
+                          <span>{crumb.label}</span>
+                        ) : (
+                          <Link href={crumb.href}>{crumb.label}</Link>
+                        )}
+                      </li>
+                    );
+                  })}
+                </ol>
+              </nav>
+              <h2>{title}</h2>
+              <div className='optional_text d-flex flex-column align-items-center justify-content-center text-center'>
                 <p>
                   We Create Unique Digital Experiences For Global Brands By
                   Integrating AI, Innovative Design, And Advanced Technology.
                 </p>
-                <Buttons links="#" btnText="Let’s Explore Our Services" />
+                <Buttons links='#' btnText='Let’s Explore Our Services' />
               </div>
             </div>
           </Col>
-          <Col sm={3} className="d-flex justify-content-center align-items-center about_banner_image " style={{ opacity: 0.40 }}>
+          <Col
+            sm={3}
+            className='d-flex justify-content-center align-items-center about_banner_image '
+            style={{ opacity: 0.4 }}
+          >
             <Image
-              src="/images/about-p.png"
+              src='/images/about-p.png'
               width={290}
               height={355}
-              alt="screw"
+              alt='screw'
             />
           </Col>
         </Row>
       </Container>
-      <div className="spotlight2"></div>
+      <div className='spotlight2'></div>
     </section>
   );
 };

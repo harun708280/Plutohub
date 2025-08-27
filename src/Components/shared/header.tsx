@@ -1,16 +1,16 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { Col, Container, Offcanvas, Row } from 'react-bootstrap'
-import Buttons from '../Banner/Buttons'
+import { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { Col, Container, Offcanvas, Row } from "react-bootstrap";
+import Buttons from "../Banner/Buttons";
 
 const Header = () => {
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false)
-  const handleShow = () => setShow(true)
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Offcanvas
@@ -39,13 +39,12 @@ const Header = () => {
                 <li>
                   <Link href='/about'>About Us</Link>
                 </li>
-                {/* <li>
-                  <Link href='/about'>Projects</Link>
-                </li> */}
                 <li>
-                   <Link href="/contact">Contact</Link>
+                  <Link href='/blog'>Blogs</Link>
                 </li>
-               
+                <li>
+                  <Link href='/contact'>Contact</Link>
+                </li>
               </ul>
             </nav>
           </div>
@@ -104,6 +103,9 @@ const Header = () => {
                     <li>
                       <Link href='/about'>About Us</Link>
                     </li>
+                    <li>
+                      <Link href='/blog'>Blogs</Link>
+                    </li>
                     {/* <li>
                       <Link href='/about'>Projects</Link>
                     </li> */}
@@ -111,14 +113,16 @@ const Header = () => {
                       <Link href='/about'>Blog</Link>
                     </li> */}
                     <li>
-                      <Link href="/contact">Contact</Link>
-
+                      <Link href='/contact'>Contact</Link>
                     </li>
                   </ul>
                 </nav>
 
                 <div className='header-btn'>
-                  <Buttons links='https://calendly.com/plutohubagency/30min?month=2025-08' btnText='Let’s Talk' />
+                  <Buttons
+                    links='https://calendly.com/plutohubagency/30min?month=2025-08'
+                    btnText='Let’s Talk'
+                  />
                 </div>
               </div>
             </Col>
@@ -126,7 +130,7 @@ const Header = () => {
         </Container>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
