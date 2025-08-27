@@ -1,24 +1,34 @@
 "use client";
 
+import Image from "next/image";
+import Buttons from "../../Banner/Buttons";
+
 const RightSidebar = () => {
   return (
     <>
-      <div className="card mb-4 shadow-sm">
-        <div className="card-body">
-          <h6 className="card-title">Are you interested in a quoted project?</h6>
-          <p className="card-text">
-            Start with a UI/UX design and if we’re fit for your needs without any major commitment.
-          </p>
-          <a href="#" className="btn btn-success btn-sm">Get a Quote</a>
+      <div className="sidebar-main">
+        <Image
+          src="/images/blogDetails-sideBar.png"
+          height={252}
+          width={252}
+          alt=""
+          layout="responsive"
+        />
+        <h6>Are you interested in a quoted project?</h6>
+        <p>
+          Start with a UI/UX design and if we’re fit for your needs without any
+          major commitment.
+        </p>
+        <div>
+          <Buttons btnText="Get a Quote" />
         </div>
       </div>
-
-      <div className="card p-3">
-        <h6 className="mb-2">More Tags</h6>
-        <div>
-          <span className="badge bg-primary me-2 mb-2">Technology</span>
-          <span className="badge bg-secondary me-2 mb-2">Design</span>
-          <span className="badge bg-warning text-dark me-2 mb-2">UI Design</span>
+      <div className="sidebar-main-tag">
+        <h6>More Tags</h6>
+        <div className="d-flex flex-wrap gap-2">
+          <button className="tag technology">Technology</button>
+          <button className="tag design">Design</button>
+          <button className="tag ui-Design">Ui Design</button>
         </div>
       </div>
     </>

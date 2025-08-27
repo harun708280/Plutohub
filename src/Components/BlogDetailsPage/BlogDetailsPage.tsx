@@ -14,7 +14,7 @@ interface BlogDetailsPageProps {
 
 const BlogDetailsPage = ({ params }: BlogDetailsPageProps) => {
   return (
-    <div className="container py-4 blog-details">
+    <div className="container py-4 blog-details ">
       <Tab.Container defaultActiveKey="stock">
         <div className="row">
           {/* Left Sidebar */}
@@ -23,7 +23,7 @@ const BlogDetailsPage = ({ params }: BlogDetailsPageProps) => {
           </div>
 
           {/* Middle Blog Content */}
-          <div className="col-lg-6 mb-4">
+          <div className="col-lg-6 mb-4 ">
             <BlogContent />
           </div>
 
